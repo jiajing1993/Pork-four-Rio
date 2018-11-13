@@ -30,6 +30,11 @@ const Layout = ({ children }) => (
         <div className="container">
           {children}
         </div>
+        <footer>
+          Why not we have a coffee ☕️, and see how can we work together. 
+          <br/>
+          Call Me out here ✉️ jiajing19932@gmail.com
+        </footer>
       </>
     )}
   />

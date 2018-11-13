@@ -2,7 +2,7 @@ import React from 'react'
 import './project.scss'
 
 export default props => (
-  <div className="project-pill" style={{ backgroundImage: `url(${props.image})` }}>
+  <div className="project-pill" style={{ backgroundImage: `url(${props.image})`, backgroundColor: `${props.backgroundColor}`  }}>
     <div className="overlay">
       <p>{props.name}</p>
       <div className="tags">

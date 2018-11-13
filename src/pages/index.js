@@ -5,6 +5,9 @@ import './index.scss'
 
 import SocialData from '../data/social'
 import SideProjects from '../data/projects'
+import coolStuffs from '../data/coolStuff'
+
+import RandomImage from '../images/projects/random.png'
 
 
 const IndexPage = () => (
@@ -67,11 +70,11 @@ const IndexPage = () => (
       <h5>Cool Projects I've created</h5>
       <div className="grid-row">
         {
-          SideProjects.map((project, index) => {
+          coolStuffs.map((project, index) => {
             return (
               <div className="grid" key={index}>
                 <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  <Project name={project.name} image={project.image} tags={project.tags} />
+                  <Project name={project.name} image={project.image} backgroundColor={project.backgroundColor} tags={project.tags} />
                 </a>
               </div>
             )
@@ -82,17 +85,11 @@ const IndexPage = () => (
     <section className="project-section">
       <h5>Some serious shit I'm doing</h5>
       <div className="grid-row">
-        {
-          SideProjects.map((project, index) => {
-            return (
-              <div className="grid" key={index}>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  <Project name={project.name} image={project.image} tags={project.tags} />
-                </a>
-              </div>
-            )
-          })
-        }
+        <div className="grid">
+          <a href="https://jiajing19932.gitbook.io/self-cultivation-of-web-developer/" target="_blank" rel="noopener noreferrer">
+            <Project name="Self Cultivation of Web Developer" image={RandomImage} tags={["writting"]} />
+          </a>
+        </div>
       </div>
     </section>
   </Layout>
