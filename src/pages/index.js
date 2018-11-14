@@ -5,7 +5,8 @@ import './index.scss'
 
 import SocialData from '../data/social'
 import SideProjects from '../data/projects'
-import coolStuffs from '../data/coolStuff'
+import CoolStuffs from '../data/coolStuff'
+import Designs from '../data/design'
 
 import RandomImage from '../images/projects/random.png'
 
@@ -54,11 +55,11 @@ const IndexPage = () => (
       <h5>Design I sketched</h5>
       <div className="grid-row">
         {
-          SideProjects.map((project, index) => {
+          Designs.map((design, index) => {
             return (
               <div className="grid" key={index}>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  <Project name={project.name} image={project.image} tags={project.tags} />
+                <a href={design.link} target="_blank" rel="noopener noreferrer">
+                  <Project name={design.name} image={design.image} tags={design.tags} />
                 </a>
               </div>
             )
@@ -70,7 +71,7 @@ const IndexPage = () => (
       <h5>Cool Projects I've created</h5>
       <div className="grid-row">
         {
-          coolStuffs.map((project, index) => {
+          CoolStuffs.map((project, index) => {
             return (
               <div className="grid" key={index}>
                 <a href={project.link} target="_blank" rel="noopener noreferrer">
