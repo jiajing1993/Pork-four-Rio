@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import './layout.scss'
 
 const hotjar = (h,o,t,j,a,r) => {
+    console.log(h)
     h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
     h._hjSettings={hjid:1111685,hjsv:6};
     a=o.getElementsByTagName('head')[0];
@@ -47,7 +48,7 @@ const Layout = ({ children }) => (
           You can call me out via my email - jiajing19932@gmail.com. 
         </footer>
         {
-          hotjar(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=')
+          typeof window !== `undefined` ? hotjar(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=') : ""
         }
       </>
     )}
