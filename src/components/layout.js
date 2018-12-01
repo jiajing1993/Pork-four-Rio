@@ -11,6 +11,7 @@ const hotjar = (h,o,t,j,a,r) => {
     a=o.getElementsByTagName('head')[0];
     r=o.createElement('script');r.async=1;
     r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    console.log(r)
     a.appendChild(r);
 }
 
