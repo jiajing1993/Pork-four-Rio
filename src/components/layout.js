@@ -23,6 +23,7 @@ const Layout = ({ children }) => (
           meta={[
             { name: 'description', content: 'Loh Jia Jing Personal Portflio' },
             { name: 'keywords', content: 'I am Loh Jia Jing. A software engineer, doing frontend web development. Sometimes, I also design user interface and experience for Mobile Application and Website.' },
+            { name: 'google-site-verification', content: 'WZmCTUIyeCflXu68foN0UAr9WfQEi2CHp6F8VST7F-k' },
           ]}
         >
           <html lang="en" />
