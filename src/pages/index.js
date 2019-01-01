@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Project from '../components/project'
 import './index.scss'
+import { Link } from 'gatsby'
 
 import SocialData from '../data/social'
 import SideProjects from '../data/projects'
@@ -14,6 +15,7 @@ import RandomImage from '../images/projects/random.png'
 const IndexPage = () => (
   <Layout>
     <section className="top-section">
+      <Link to="/blog/my-first-post">First Blog</Link>
       <div className="personal-info">
         <h1>Loh Jia Jing</h1>
         <p>

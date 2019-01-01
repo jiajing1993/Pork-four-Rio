@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.blog-post-container {
+}
+
+.blog-post-header {
+  padding: 10%;
+  padding-bottom: 70px;
+}
+
+.blog-post-content {
+  background: white;
+  width: 80%;
+  margin: 0px auto;
+  margin-top: -60px;
+  padding: 5%;
+  border-radius: 5px;
+  box-shadow: 0px 6px 20px rgba(black, 0.1);
+}
