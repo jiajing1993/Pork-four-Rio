@@ -1,9 +1,9 @@
 ---
-path: "/blog/my-first-post"
+path: "/blog/my-second-post"
 date: "2017-11-07"
-title: "👀 Lookback to 2018"
-color: "black"
-tags: ['life', '2018']
+title: "Welcome 2019 to my life"
+color: "blue"
+tags: ['life', '2019']
 ---
 
 People often assume that I know far more than I actually do. That’s not a bad problem to have and I’m not complaining. (Folks from minority groups often suffer the opposite bias despite their hard-earned credentials, and that *sucks*.)

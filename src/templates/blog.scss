@@ -11,11 +11,12 @@
     width: 70px;
     padding: 10px;
     line-height: 50px;
+    border-radius: 5px;
     margin: 20px;
     font-size: 14px;
     text-decoration: none;
     text-align: center;
-    box-shadow: 0px 3px 6px rgba(black, 0.7);
+    box-shadow: 0px 3px 6px rgba(black, 0.2);
     text-transform: uppercase;
     transition: all 0.5s;
     &:hover {
@@ -28,16 +29,13 @@
 }
 
 .blog-post-header {
-  padding: 10%;
+  padding: 5% 15%;
   padding-bottom: 70px;
-  h1 {
-    color: #ff5a60;
-  }
 }
 
 .blog-post-content {
   background: white;
-  width: 80%;
+  width: 70%;
   margin: 0px auto;
   margin-top: -60px;
   padding: 5%;
