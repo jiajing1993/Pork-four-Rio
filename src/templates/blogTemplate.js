@@ -10,10 +10,11 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <div className="blog-post-container">
+      <Link className="back-button" to="/">Home</Link>
       <div className="blog-post-header">
-        <Link to="/">Home</Link>
+        
         <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+        <p>{frontmatter.date}</p>
       </div>
       <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
