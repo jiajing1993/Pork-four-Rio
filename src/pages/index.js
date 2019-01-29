@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Project from '../components/project'
 import './index.scss'
+import { Link, graphql } from 'gatsby';
 
 import SocialData from '../data/social'
 import SideProjects from '../data/projects'
@@ -11,7 +12,9 @@ import Designs from '../data/design'
 import RandomImage from '../images/projects/random.png'
 
 
-const IndexPage = () => (
+const IndexPage = (props) => {
+  const postList = props.data.allMarkdownRemark
+  return (
   <Layout>
     <section className="top-section">
       <div className="personal-info">
@@ -33,6 +36,18 @@ const IndexPage = () => (
             })
           }
         </ul>
+      </div>
+    </section>
+    <section className="project-section">
+      <h5>Article about Me</h5>
+      <div className="grid-row">
+        {postList.edges.map(({ node }, index) => (
+          <div className="grid" key={index}>
+            <Link to={node.frontmatter.path}>
+              <Project name={node.frontmatter.title} backgroundColor={node.frontmatter.color} tags={node.frontmatter.tags} />
+            </Link>
+          </div>
+        ))}
       </div>
     </section>
     <section className="project-section">
@@ -94,6 +109,24 @@ const IndexPage = () => (
       </div>
     </section>
   </Layout>
-)
+)}
 
 export default IndexPage
+
+export const listQuery = graphql`
+  query ListQuery {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          frontmatter {
+            date(formatString: "MMMM Do YYYY")
+            title
+            path
+            tags
+            color
+          }
+        }
+      }
+    }
+  }
+`
