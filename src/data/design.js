@@ -3,8 +3,16 @@ import Corporate from '../images/designs/corporate.png'
 import GasBuddy from '../images/designs/gasbuddy.png'
 import JimmyProp from '../images/designs/jimmyproperty.png'
 import Oneday from '../images/designs/oneday.png'
+import RambutanCode from '../images/designs/rambutancode.png'
 
 const DESIGNS = [
+  {
+    name: "Sabah Coding School | Code Rambutan",
+    link: "https://dribbble.com/shots/6283774-Rambutan-Code-Academy-Website",
+    image: RambutanCode,
+    tags: ["Sketch", "Web"]
+    
+  },
   {
     name: "Gas Buddy - Gas Pricing Tracker",
     link: "https://dribbble.com/shots/5545087-Gas-Pricing-Tracker",
