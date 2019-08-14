@@ -20,7 +20,7 @@ const IndexPage = (props) => {
       <div className="personal-info">
         <h1>Loh Jia Jing</h1>
         <p>
-          I am a software engineer, focusing on frontend web development. 
+          I am a software engineer, focusing on frontend web development.
           Sometimes, I also design user interface and experience for Mobile Application and Website.
         </p>
         <ul className="contacts-list">
