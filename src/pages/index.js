@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Project from '../components/project'
 import './index.scss'
-import { Link, graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby'
 
 import SocialData from '../data/social'
 import SideProjects from '../data/projects'
@@ -11,46 +11,48 @@ import Designs from '../data/design'
 
 import RandomImage from '../images/projects/random.png'
 
-
-const IndexPage = (props) => {
+const IndexPage = props => {
   const postList = props.data.allMarkdownRemark
   return (
-  <Layout>
-    <section className="top-section">
-      <div className="personal-info">
-        <h1>Loh Jia Jing</h1>
-        <p>
-          I am a software engineer, focusing on frontend web development.
-          Sometimes, I also design user interface and experience for Mobile Application and Website.
-        </p>
-        <ul className="contacts-list">
-          {
-            SocialData.map((data, index)=> {
+    <Layout>
+      <section className="top-section">
+        <div className="personal-info">
+          <h1>Loh Jia Jing</h1>
+          <p>
+            I am a software engineer, focusing on frontend web development.
+            Sometimes, I also design user interface and experience for Mobile
+            Application and Website.
+          </p>
+          <ul className="contacts-list">
+            {SocialData.map((data, index) => {
               return (
                 <li key={index}>
                   <a href={data.link} target="_blank" rel="noopener noreferrer">
-                    <img src={data.image} alt={data.name}/>
+                    <img src={data.image} alt={data.name} />
                   </a>
                 </li>
               )
-            })
-          }
-        </ul>
-      </div>
-    </section>
-    <section className="project-section">
-      <h5>Article about Me</h5>
-      <div className="grid-row">
-        {postList.edges.map(({ node }, index) => (
-          <div className="grid" key={index}>
-            <Link to={node.frontmatter.path}>
-              <Project name={node.frontmatter.title} backgroundColor={node.frontmatter.color} tags={node.frontmatter.tags} />
-            </Link>
-          </div>
-        ))}
-      </div>
-    </section>
-    <section className="project-section">
+            })}
+          </ul>
+        </div>
+      </section>
+      <section className="project-section">
+        <h5>Article about Me</h5>
+        <div className="grid-row">
+          {postList.edges.map(({ node }, index) => (
+            <div className="grid" key={index}>
+              <Link to={node.frontmatter.path}>
+                <Project
+                  name={node.frontmatter.title}
+                  backgroundColor={node.frontmatter.color}
+                  tags={node.frontmatter.tags}
+                />
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* <section className="project-section">
       <h5>Website I've built</h5>
       <div className="grid-row">
         {
@@ -107,9 +109,10 @@ const IndexPage = (props) => {
           </a>
         </div>
       </div>
-    </section>
-  </Layout>
-)}
+    </section> */}
+    </Layout>
+  )
+}
 
 export default IndexPage
 
