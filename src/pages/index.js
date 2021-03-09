@@ -20,6 +20,7 @@ const IndexPage = props => {
           <h1>Loh Jia Jing</h1>
           <p>
             I am a software engineer, focusing on frontend web development.
+            <br />
             Sometimes, I also design user interface and experience for Mobile
             Application and Website.
           </p>
@@ -53,7 +54,7 @@ const IndexPage = props => {
           ))}
         </div>
       </section>
-      <section className="project-section">
+      {/* <section className="project-section">
         <h5>Website I've built</h5>
         <div className="grid-row">
           {SideProjects.map((project, index) => {
@@ -133,7 +134,7 @@ const IndexPage = props => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   )
 }

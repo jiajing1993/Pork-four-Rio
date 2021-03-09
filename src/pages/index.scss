@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
-
+html {
+  font-size: 16px;
+}
 .container {
   font-family: 'Nunito', sans-serif;
   padding: 0px 10%;
@@ -9,15 +11,23 @@
     justify-content: flex-end;
   }
   .personal-info {
-    max-width: 400px;
-    text-align: right;
+    // max-width: 400px;
+    // text-align: right;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
     ul {
       padding: 0px;
+      margin: 0;
       li {
         display: inline;
-        margin-left: 15px;
-        img {
-          width: 20px;
+        margin-right: 15px;
+        svg {
+          width: 30px;
           vertical-align: middle;
         }
       }
@@ -40,7 +50,7 @@ section {
     &:nth-child(3n){
       margin-right: 0;
     }
-  } 
+  }
   @media only screen and (max-width: 1000px) {
     .grid {
       width: 49%;
@@ -48,14 +58,14 @@ section {
       &:nth-child(2n){
         margin-right: 0;
       }
-    } 
+    }
   }
 
   @media only screen and (max-width: 500px) {
     .grid {
       width: 100%;
       margin-right: 0;
-    } 
+    }
   }
 }
 
