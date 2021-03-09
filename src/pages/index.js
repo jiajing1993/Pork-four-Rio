@@ -1,8 +1,8 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Project from '../components/project'
-import './index.scss'
 import { Link, graphql } from 'gatsby'
+import './index.scss'
 
 import SocialData from '../data/social'
 import SideProjects from '../data/projects'
@@ -25,10 +25,11 @@ const IndexPage = props => {
           </p>
           <ul className="contacts-list">
             {SocialData.map((data, index) => {
+              let Icon = data.image
               return (
                 <li key={index}>
                   <a href={data.link} target="_blank" rel="noopener noreferrer">
-                    <img src={data.image} alt={data.name} />
+                    <Icon />
                   </a>
                 </li>
               )
@@ -52,64 +53,87 @@ const IndexPage = props => {
           ))}
         </div>
       </section>
-      {/* <section className="project-section">
-      <h5>Website I've built</h5>
-      <div className="grid-row">
-        {
-          SideProjects.map((project, index) => {
+      <section className="project-section">
+        <h5>Website I've built</h5>
+        <div className="grid-row">
+          {SideProjects.map((project, index) => {
             return (
               <div className="grid" key={index}>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  <Project name={project.name} image={project.image} tags={project.tags} />
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Project
+                    name={project.name}
+                    image={project.image}
+                    tags={project.tags}
+                  />
                 </a>
               </div>
             )
-          })
-        }
-      </div>
-    </section>
-    <section className="project-section">
-      <h5>Design I sketched</h5>
-      <div className="grid-row">
-        {
-          Designs.map((design, index) => {
+          })}
+        </div>
+      </section>
+      <section className="project-section">
+        <h5>Design I sketched</h5>
+        <div className="grid-row">
+          {Designs.map((design, index) => {
             return (
               <div className="grid" key={index}>
                 <a href={design.link} target="_blank" rel="noopener noreferrer">
-                  <Project name={design.name} image={design.image} tags={design.tags} />
+                  <Project
+                    name={design.name}
+                    image={design.image}
+                    tags={design.tags}
+                  />
                 </a>
               </div>
             )
-          })
-        }
-      </div>
-    </section>
-    <section className="project-section">
-      <h5>Cool Projects I've created</h5>
-      <div className="grid-row">
-        {
-          CoolStuffs.map((project, index) => {
+          })}
+        </div>
+      </section>
+      <section className="project-section">
+        <h5>Cool Projects I've created</h5>
+        <div className="grid-row">
+          {CoolStuffs.map((project, index) => {
             return (
               <div className="grid" key={index}>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  <Project name={project.name} image={project.image} backgroundColor={project.backgroundColor} tags={project.tags} />
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Project
+                    name={project.name}
+                    image={project.image}
+                    backgroundColor={project.backgroundColor}
+                    tags={project.tags}
+                  />
                 </a>
               </div>
             )
-          })
-        }
-      </div>
-    </section>
-    <section className="project-section">
-      <h5>Some serious shit I'm doing</h5>
-      <div className="grid-row">
-        <div className="grid">
-          <a href="https://jiajing19932.gitbook.io/self-cultivation-of-web-developer/" target="_blank" rel="noopener noreferrer">
-            <Project name="Self Cultivation of Web Developer" image={RandomImage} tags={["writting"]} />
-          </a>
+          })}
         </div>
-      </div>
-    </section> */}
+      </section>
+      <section className="project-section">
+        <h5>Some serious shit I'm doing</h5>
+        <div className="grid-row">
+          <div className="grid">
+            <a
+              href="https://jiajing19932.gitbook.io/self-cultivation-of-web-developer/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Project
+                name="Self Cultivation of Web Developer"
+                image={RandomImage}
+                tags={['writting']}
+              />
+            </a>
+          </div>
+        </div>
+      </section>
     </Layout>
   )
 }
