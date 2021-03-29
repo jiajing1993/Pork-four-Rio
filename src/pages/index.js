@@ -38,7 +38,7 @@ const IndexPage = props => {
           </ul>
         </div>
       </section>
-      <section className="project-section">
+      {/* <section className="project-section">
         <h5>Article about Me</h5>
         <div className="grid-row">
           {postList.edges.map(({ node }, index) => (
@@ -53,7 +53,7 @@ const IndexPage = props => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
       {/* <section className="project-section">
         <h5>Website I've built</h5>
         <div className="grid-row">
